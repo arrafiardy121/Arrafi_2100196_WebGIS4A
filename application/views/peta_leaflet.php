@@ -1,5 +1,5 @@
 <div class="content"> 
- <div id="map" style="width: 100%; height: 530px; color:black;"></div> 
+ <div id="map" style="width: 100%; height: 660px; color:black;"></div> 
 </div> 
 <script> 
 var map = L.map('map', { 
@@ -12,5 +12,6 @@ var GoogleSatelliteHybrid= L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y
 maxZoom: 22, 
 attribution: 'Latihan Web GIS' 
 }).addTo(map);
+
 
 </script>
