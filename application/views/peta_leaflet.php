@@ -1,5 +1,5 @@
 <div class="content"> 
- <div id="map" style="width: 100%; height: 660px; color:black;"></div> 
+ <div id="map" style="width: 100%; height: 735px; color:black;"></div> 
 </div> 
 <script> 
 var map = L.map('map', { 
