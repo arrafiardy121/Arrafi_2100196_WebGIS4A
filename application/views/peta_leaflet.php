@@ -61,6 +61,6 @@ timeout: 10000
 } 
 }).addTo(map);
 
-
+var zoom_bar = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
 
 </script>
