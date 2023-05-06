@@ -16,7 +16,7 @@ attribution: 'Latihan Web GIS'
 
 var baseLayers = {'Google Satellite Hybrid': GoogleSatelliteHybrid}; 
 var overlayLayers = {} 
-L.control.layers(baseLayers, overlayLayers, {collapsed: false}).addTo(map);
+L.control.layers(baseLayers, overlayLayers, {collapsed: true}).addTo(map);
 
 var 
 osmUrl='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z} /{y}/{x}'; 
