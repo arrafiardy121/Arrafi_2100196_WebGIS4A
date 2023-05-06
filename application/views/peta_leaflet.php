@@ -43,14 +43,14 @@ fillOpacity: 0.8
 }, 
 circleStyle: { 
 weight: 1, 
-clickable: false }, 
+clickable: false 
+}, 
 icon: "fa fa-location-arrow", 
 metric: false, 
 strings: { 
 title: "My location", 
-popup: "You are within {distance} {unit} from this point",
- outsideMapBoundsMsg: "You seem located outside the 
-boundaries of the map" 
+popup: "You are within {distance} {unit} from this point", 
+outsideMapBoundsMsg: "You seem located outside the boundaries of the map" 
 }, 
 locateOptions: { 
 maxZoom: 18, 
@@ -60,5 +60,7 @@ maximumAge: 10000,
 timeout: 10000 
 } 
 }).addTo(map);
+
+
 
 </script>
