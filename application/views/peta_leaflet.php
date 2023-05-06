@@ -73,5 +73,11 @@ labelTemplateLng:"Longitude: {x}"
 /* scala */ 
 L.control.scale({metric: true, position: "bottomleft"}).addTo(map);
 
+var north = L.control({position: "bottomleft"}); 
+north.onAdd = function(map) { 
+var div = L.DomUtil.create("div", "info legend"); 
+div.innerHTML = '<img src="<?=base_url()?>assets/compassFIXED.png"style=width:150px;>'; 
+return div; } 
+north.addTo(map);
 
 </script>
