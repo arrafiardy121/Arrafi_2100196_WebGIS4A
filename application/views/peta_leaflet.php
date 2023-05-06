@@ -29,4 +29,5 @@ aimingRectOptions : rect1, shadowRectOptions: rect2}).addTo(map);
 
 L.Control.geocoder({position :"topleft", collapsed:true}).addTo(map);
 
+
 </script>
