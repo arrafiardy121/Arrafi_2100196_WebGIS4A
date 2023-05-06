@@ -26,4 +26,6 @@ var rect2 = {color: "#0000AA", weight: 1, opacity:0, fillOpacity:0};
 var miniMap = new L.Control.MiniMap(osm2, {toggleDisplay: true, position : "bottomright", 
 aimingRectOptions : rect1, shadowRectOptions: rect2}).addTo(map);
 
+L.Control.geocoder({position :"topleft", collapsed:true}).addTo(map);
+
 </script>
