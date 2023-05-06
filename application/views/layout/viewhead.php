@@ -34,4 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <link rel="stylesheet" href="<?=base_url()?>assets/Control.MiniMap.css" /> 
 <script src="<?=base_url()?>assets/Control.MiniMap.js"></script>
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" /> 
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
 </head>
