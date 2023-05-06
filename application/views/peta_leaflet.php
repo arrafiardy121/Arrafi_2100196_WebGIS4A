@@ -5,6 +5,7 @@
 var map = L.map('map', { 
  center: [-1.7912604466772375, 116.42311966554416], 
  zoom: 5, 
+ zoomControl: false,
  layers:[] 
 }); 
 
