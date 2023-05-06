@@ -40,5 +40,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.css"> 
 <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js"></script>
 
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/L.Control.ZoomBar.css"/> 
+<script type="text/javascript" src="<?=base_url()?>assets/L.Control.ZoomBar.js"></script>
+
 
 </head>
