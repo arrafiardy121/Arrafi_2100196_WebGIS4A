@@ -43,8 +43,7 @@ var groupedOverlays = {
 'Ibu Kota Provinsi' :prov} 
 };
 
-var overlayLayers = {} 
-L.control.layers(baseLayers, overlayLayers, {collapsed: true}).addTo(map);
+L.control.groupedLayers(baseLayers, groupedOverlays).addTo(map);
 
 var 
 osmUrl='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z} /{y}/{x}'; 
@@ -109,17 +108,17 @@ return div; }
 north.addTo(map);
 
 $.getJSON("<?=base_url()?>assets/DataTitikProvinsiIndonesia.geojson",function(data){ 
-var ratIcon = L.icon({ 
-iconUrl: '<?=base_url()?>assets/markerpt.png', 
-iconSize: [12,10] 
-}); 
-L.geoJson(data,{ 
-pointToLayer: function(feature,latlng){ 
-var marker = L.marker(latlng,{icon: ratIcon}); 
-marker.bindPopup(feature.properties.CITY_NAME); 
-return marker; 
-} 
-}).addTo(prov); 
+    var ratIcon = L.icon({ 
+        iconUrl: '<?=base_url()?>assets/markerpt.png', 
+        iconSize: [12,10] 
+    }); 
+    L.geoJson(data,{ 
+        pointToLayer: function(feature,latlng){ 
+            var marker = L.marker(latlng,{icon: ratIcon}); 
+            marker.bindPopup(feature.properties.CITY_NAME); 
+            return marker; 
+        } 
+    }).addTo(prov); 
 });
 
 </script>
