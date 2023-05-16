@@ -175,4 +175,20 @@ return marker;
 }).addTo(Poli); 
 });
 
+$.getJSON("<?=base_url()?>/assets/sungai.geojson",function(kode){ 
+ L.geoJson( kode, { 
+ style: function(feature){ 
+ var color, 
+ kode = feature.properties.kode; 
+ if ( kode < 2 ) color = "#f2051d"; 
+ else if ( kode > 0 ) color = "#f2051d"; 
+ else color = "#f2051d"; // no data 
+ return { color: "#999", weight: 3, color: color, fillOpacity: .8 }; 
+ }, 
+ onEachFeature: function( feature, layer ){ 
+ layer.bindPopup 
+ () 
+ } }).addTo(sungai); 
+});
+
 </script>
