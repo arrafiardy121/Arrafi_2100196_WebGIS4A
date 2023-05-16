@@ -14,7 +14,16 @@ maxZoom: 22,
 attribution: 'Latihan Web GIS' 
 }).addTo(map);
 
-var baseLayers = {'Google Satellite Hybrid': GoogleSatelliteHybrid}; 
+var Esri_NatGeoWorldMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+maxZoom: 16
+});
+
+var baseLayers = { 
+    'Google Satellite Hybrid': GoogleSatelliteHybrid, 
+    'Esri_NatGeoWorldMap':Esri_NatGeoWorldMap 
+};
+
 var overlayLayers = {} 
 L.control.layers(baseLayers, overlayLayers, {collapsed: true}).addTo(map);
 
