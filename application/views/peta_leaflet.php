@@ -41,8 +41,13 @@ var baseLayers = {
 
 var groupedOverlays = {
 "Peta Dasar":{
-'Ibu Kota Provinsi' :prov} 
+'Ibu Kota Provinsi' :prov}, 
+
+"Peta Khusus":{
+'Fasilitas Kesehatan' :faskes}
 };
+
+
 
 L.control.groupedLayers(baseLayers, groupedOverlays).addTo(map);
 
