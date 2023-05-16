@@ -229,5 +229,47 @@ $.getJSON("<?=base_url()?>/assets/provinsipl.geojson",function(Kode){
  }).addTo(provin);
  });
 
+ const legend = L.control.Legend({
+ position: "bottomright",
+ title: "Keterangan",
+ collapsed: true,
+ symbolWidth: 24,
+ opacity: 1,
+ column: 1,
+ legends: [{
+ label: "Ibu Kota Provinsi",
+ type: "image",
+ url: "<?=base_url()?>/assets/markerpt.png",
+ },{
+ label: "Jaringan Sungai",
+ type: "polyline",
+ color: "#f2051d",
+ fillColor: "#f2051d",
+ weight: 2
+ },{
+ title: "Jaringan Sungai"
+ },{
+ label: "Polygon Provinsi",
+ font: 29,
+ type: "polygon",
+ sides: 4,
+ color: "#FF0000",
+ fillColor: "#FF0000",
+ weight: 2
+ },{
+ label: "Poliklinik",
+ type: "image",
+ url: "<?=base_url()?>/assets/markerpl.png",
+ },{
+ label: "Rumah Sakit Umum",
+ type: "image",
+ url: "<?=base_url()?>/assets/markersu.png",
+ },{
+ label: "Puskesmas",
+ type: "image",
+ url: "<?=base_url()?>/assets/markerh.png",
+ }]
+ })
+ .addTo(map);
 
 </script>
