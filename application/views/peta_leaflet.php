@@ -108,4 +108,18 @@ div.innerHTML = '<img src="<?=base_url()?>assets/compassFIXED.png"style=width:15
 return div; } 
 north.addTo(map);
 
+$.getJSON("<?=base_url()?>assets/DataTitikProvinsiIndonesia.geojson",function(data){ 
+var ratIcon = L.icon({ 
+iconUrl: '<?=base_url()?>assets/markerpt.png', 
+iconSize: [12,10] 
+}); 
+L.geoJson(data,{ 
+pointToLayer: function(feature,latlng){ 
+var marker = L.marker(latlng,{icon: ratIcon}); 
+marker.bindPopup(feature.properties.CITY_NAME); 
+return marker; 
+} 
+}).addTo(prov); 
+});
+
 </script>
