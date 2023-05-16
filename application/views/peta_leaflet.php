@@ -5,6 +5,7 @@
 
 var prov = new L.LayerGroup();
 var faskes = new L.LayerGroup();
+var RSU = new L.LayerGroup();
 
 var map = L.map('map', { 
  center: [-1.7912604466772375, 116.42311966554416], 
@@ -125,6 +126,20 @@ $.getJSON("<?=base_url()?>assets/DataTitikProvinsiIndonesia.geojson",function(da
             return marker; 
         } 
     }).addTo(prov); 
+});
+
+$.getJSON("<?=base_url()?>assets/faskesril.geojson",function(data){ 
+var ratIcon = L.icon({ 
+iconUrl: '<?=base_url()?>assets/markerh.png', 
+iconSize: [12,10] 
+}); 
+L.geoJson(data,{ 
+pointToLayer: function(feature,latlng){ 
+var marker = L.marker(latlng,{icon: ratIcon}); 
+marker.bindPopup(feature.properties.NAMOBJ); 
+return marker; 
+} 
+}).addTo(faskes); 
 });
 
 </script>
