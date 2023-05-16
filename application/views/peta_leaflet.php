@@ -6,6 +6,7 @@
 var prov = new L.LayerGroup();
 var faskes = new L.LayerGroup();
 var RSU = new L.LayerGroup();
+var Poli = new L.LayerGroup();
 
 var map = L.map('map', { 
  center: [-1.7912604466772375, 116.42311966554416], 
@@ -45,7 +46,9 @@ var groupedOverlays = {
 'Ibu Kota Provinsi' :prov}, 
 
 "Peta Khusus":{
-'Fasilitas Kesehatan' :faskes}
+'Puskesmas' :faskes,
+'Rumah Sakit Umum' : RSU,
+'Poliklinik':Poli}
 };
 
 
@@ -140,6 +143,34 @@ marker.bindPopup(feature.properties.NAMOBJ);
 return marker; 
 } 
 }).addTo(faskes); 
+});
+
+$.getJSON("<?=base_url()?>assets/rsu.geojson",function(data){ 
+var ratIcon = L.icon({ 
+iconUrl: '<?=base_url()?>assets/markersu.png', 
+iconSize: [12,10] 
+}); 
+L.geoJson(data,{ 
+pointToLayer: function(feature,latlng){ 
+var marker = L.marker(latlng,{icon: ratIcon}); 
+marker.bindPopup(feature.properties.NAMOBJ); 
+return marker; 
+} 
+}).addTo(RSU); 
+});
+
+$.getJSON("<?=base_url()?>assets/poliklinik.geojson",function(data){ 
+var ratIcon = L.icon({ 
+iconUrl: '<?=base_url()?>assets/markerpl.png', 
+iconSize: [12,10] 
+}); 
+L.geoJson(data,{ 
+pointToLayer: function(feature,latlng){ 
+var marker = L.marker(latlng,{icon: ratIcon}); 
+marker.bindPopup(feature.properties.NAMOBJ); 
+return marker; 
+} 
+}).addTo(Poli); 
 });
 
 </script>
