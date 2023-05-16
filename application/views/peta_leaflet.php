@@ -7,6 +7,7 @@ var prov = new L.LayerGroup();
 var faskes = new L.LayerGroup();
 var RSU = new L.LayerGroup();
 var Poli = new L.LayerGroup();
+var sungai = new L.LayerGroup();
 
 var map = L.map('map', { 
  center: [-1.7912604466772375, 116.42311966554416], 
@@ -43,7 +44,8 @@ var baseLayers = {
 
 var groupedOverlays = {
 "Peta Dasar":{
-'Ibu Kota Provinsi' :prov}, 
+'Ibu Kota Provinsi' :prov,
+'Jaringan Sungai' :sungai}, 
 
 "Peta Khusus":{
 'Puskesmas' :faskes,
