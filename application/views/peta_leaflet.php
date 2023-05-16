@@ -19,6 +19,15 @@ attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVT
 maxZoom: 16
 });
 
+var GoogleMaps = new L.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', { opacity: 1.0, 
+attribution: 'Latihan Web GIS' 
+});
+
+var GoogleRoads = new L.TileLayer('https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}',{ 
+opacity: 1.0, 
+attribution: 'Latihan Web GIS' 
+});
+
 var baseLayers = { 
     'Google Satellite Hybrid': GoogleSatelliteHybrid, 
     'Esri_NatGeoWorldMap':Esri_NatGeoWorldMap 
