@@ -38,6 +38,11 @@ var baseLayers = {
     'GoogleRoads': GoogleRoads 
 };
 
+var groupedOverlays = {
+"Peta Dasar":{
+'Ibu Kota Provinsi' :prov} 
+};
+
 var overlayLayers = {} 
 L.control.layers(baseLayers, overlayLayers, {collapsed: true}).addTo(map);
 
