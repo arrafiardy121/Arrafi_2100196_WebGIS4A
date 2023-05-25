@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>About</title>
+      <title>Blog</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -76,33 +76,28 @@
          </div>
       </div>
       <!--header section end -->
-      <iframe src="<?=base_url()?>/home" width="1260" height="650"></iframe>
-      <!-- about section start -->
-      <div class="news_section layout_padding">
+      <!-- blog section start -->
+      <div class="blog_section layout_padding">
          <div class="container">
-            <h1 class="news_taital">Our About</h1>
-            <p class="news_text">Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-            <div class="news_section_2">
+            <h1 class="news_taital">Our Bolg</h1>
+            <p class="news_text">do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <div class="blog_section_2">
                <div class="row">
                   <div class="col-md-6">
-                     <div class="news_taital_box">
-                        <p class="date_text">01 Jan 2020</p>
-                        <h4 class="make_text">Make it Simple</h4>
-                        <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        <p class="post_text">Post By : Casinal</p>
-                     </div>
+                     <img src="images/img-7.png" class="image_7" style="width:100%">
                   </div>
                   <div class="col-md-6">
-                     <img src="images/img-6.png" class="image_6" style="width:100%">
-                     <h6 class="plus_text">+</h6>
+                     <h4 class="classes_text">Best Classes and study</h4>
+                     <p class="ipsum_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
                   </div>
                </div>
             </div>
+            <div class="read_bt"><a href="#">Read More</a></div>
          </div>
       </div>
-      <!-- about section end -->
+      <!-- blog section end -->
       <!-- footer section start -->
-      <div class="footer_section layout_padding margin_top_90">
+      <div class="footer_section layout_padding">
          <div class="container">
             <div class="subscribe_bt"><a href="#">Subscribe</a></div>
             <input type="text" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">

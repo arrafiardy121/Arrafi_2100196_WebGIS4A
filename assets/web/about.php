@@ -46,19 +46,19 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                           <a class="nav-link" href="index.html">Home</a>
+                           <a class="nav-link" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="about.html">About</a>
+                           <a class="nav-link" href="about.php">About</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="services.html">Services</a>
+                           <a class="nav-link" href="services.php">Services</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="blog.html">Blog</a>
+                           <a class="nav-link" href="blog.php">Blog</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="contact.html">Contact Us</a>
+                           <a class="nav-link" href="contact.php">Contact Us</a>
                         </li>
                      </ul>
                      <div class="call_section">
@@ -76,31 +76,15 @@
          </div>
       </div>
       <!--header section end -->
-      <iframe src="<?=base_url()?>/home" width="1260" height="650"></iframe>
       <!-- about section start -->
       <div class="news_section layout_padding">
          <div class="container">
-            <h1 class="news_taital">Our About</h1>
-            <p class="news_text">Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-            <div class="news_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="news_taital_box">
-                        <p class="date_text">01 Jan 2020</p>
-                        <h4 class="make_text">Make it Simple</h4>
-                        <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        <p class="post_text">Post By : Casinal</p>
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <img src="images/img-6.png" class="image_6" style="width:100%">
-                     <h6 class="plus_text">+</h6>
-                  </div>
-               </div>
-            </div>
+            <h1 class="news_taital">SAIG MAP</h1>
+            <iframe src="C:\xampp\htdocs\latihanwebgis" width="1400" height="600" position="middle"></iframe>
          </div>
       </div>
       <!-- about section end -->
+         
       <!-- footer section start -->
       <div class="footer_section layout_padding margin_top_90">
          <div class="container">

@@ -46,19 +46,19 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                           <a class="nav-link" href="index.html">Home</a>
+                           <a class="nav-link" href="<?=base_url()?>application/views/web/home.php">Home</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="about.html">About</a>
+                           <a class="nav-link" href="#important">SaIG MAP</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="services.html">Services</a>
+                           <a class="nav-link" href="<?=base_url()?>assets/web/services.php">Services</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="blog.html">Blog</a>
+                           <a class="nav-link" href="<?=base_url()?>assets/web/blog.php">Blog</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="contact.html">Contact Us</a>
+                           <a class="nav-link" href="<?=base_url()?>assets/web/contact.php">Contact Us</a>
                         </li>
                      </ul>
                      <div class="call_section">
@@ -148,48 +148,21 @@
       </div>
       <!--header section end -->
       <!-- services section start -->
-      <div class="services_section layout_padding">
+      <div id="important" class="important">
          <div class="container">
-            <h1 class="services_taital"><span style="color: #fcce2d">Our</span> Courses</h1>
-            <div class="services_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="image_main">
-                        <img src="<?=base_url()?>assets/web/images/img-2.png" class="image_8" style="width:100%">
-                        <div class="text_main">
-                           <div class="seemore_text">Art And Design</div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="image_main">
-                        <img src="<?=base_url()?>assets/web/images/img-3.png" class="image_8" style="width:100%">
-                        <div class="text_main">
-                           <div class="seemore_text">Science</div>
-                        </div>
-                     </div>
-                  </div>
+            <div class="row">
+               <div class="col-md-12">
+               <div class="titlepage">
+               <h1 class="news_taital">MAP OF WEBGIS</h1>
                </div>
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="image_main">
-                        <img src="<?=base_url()?>assets/web/images/img-4.png" class="image_8" style="width:100%">
-                        <div class="text_main">
-                           <div class="seemore_text">Business Stady</div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="image_main">
-                        <img src="<?=base_url()?>assets/web/images/img-5.png" class="image_8" style="width:100%">
-                        <div class="text_main">
-                           <div class="seemore_text">English Speaking</div>
-                        </div>
-                     </div>
-                  </div>
                </div>
             </div>
-         </div>            
+         </div>
+         <div class="important_bg">
+
+            <!--- Memanggil Web --->
+            <iframe src="<?=base_url()?>/home" width="1730" height="850"></iframe>
+         </div>
       </div>
       <!-- services section end -->
       <!-- about section start -->
@@ -217,25 +190,9 @@
       </div>
       <!-- about section end -->
       <!-- blog section start -->
-      <div class="blog_section layout_padding">
-         <div class="container">
-            <h1 class="news_taital">Our Bolg</h1>
-            <p class="news_text">do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-            <div class="blog_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <img src="<?=base_url()?>assets/web/images/img-7.png" class="image_7" style="width:100%">
-                  </div>
-                  <div class="col-md-6">
-                     <h4 class="classes_text">Best Classes and study</h4>
-                     <p class="ipsum_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
-                  </div>
-               </div>
-            </div>
-            <div class="read_bt"><a href="#">Read More</a></div>
-         </div>
-      </div>
+
       <!-- blog section end -->
+ 
       <!-- client section start -->
       <div class="client_section layout_padding">
          <div id="main_slider" class="carousel slide" data-ride="carousel">

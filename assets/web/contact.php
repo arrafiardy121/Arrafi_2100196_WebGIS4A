@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>About</title>
+      <title>Contact</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -76,33 +76,37 @@
          </div>
       </div>
       <!--header section end -->
-      <iframe src="<?=base_url()?>/home" width="1260" height="650"></iframe>
-      <!-- about section start -->
-      <div class="news_section layout_padding">
+      <!-- newsletter section start -->
+      <div class="newsletter_section layout_padding">
          <div class="container">
-            <h1 class="news_taital">Our About</h1>
-            <p class="news_text">Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-            <div class="news_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="news_taital_box">
-                        <p class="date_text">01 Jan 2020</p>
-                        <h4 class="make_text">Make it Simple</h4>
-                        <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        <p class="post_text">Post By : Casinal</p>
+            <div class="newsletter_main">
+               <h1 class="newsletter_taital">Get<br> Your free consuting </h1>
+               <div class="get_quote_bt"><a href="#">Get A Quote</a></div>
+            </div>
+            <p class="dolor_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
+         </div>
+      </div>
+      <!-- newsletter section end -->
+      <!-- contact section start -->
+      <div class="contact_section layout_padding">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-6 padding_left0">
+                  <div class="mail_section">
+                     <div class="contact_img">
+                        <h1 class="contact_taital">Best Educations In World Here</h1>
                      </div>
                   </div>
-                  <div class="col-md-6">
-                     <img src="images/img-6.png" class="image_6" style="width:100%">
-                     <h6 class="plus_text">+</h6>
-                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="map_main"><img src="images/map-img.png"></div>
                </div>
             </div>
          </div>
       </div>
-      <!-- about section end -->
+      <!-- contact section end -->
       <!-- footer section start -->
-      <div class="footer_section layout_padding margin_top_90">
+      <div class="footer_section layout_padding">
          <div class="container">
             <div class="subscribe_bt"><a href="#">Subscribe</a></div>
             <input type="text" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">

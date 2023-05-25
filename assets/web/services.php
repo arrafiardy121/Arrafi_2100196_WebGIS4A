@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>About</title>
+      <title>Services</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -76,31 +76,51 @@
          </div>
       </div>
       <!--header section end -->
-      <iframe src="<?=base_url()?>/home" width="1260" height="650"></iframe>
-      <!-- about section start -->
-      <div class="news_section layout_padding">
+      <!-- services section start -->
+      <div class="services_section layout_padding">
          <div class="container">
-            <h1 class="news_taital">Our About</h1>
-            <p class="news_text">Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-            <div class="news_section_2">
+            <h1 class="services_taital"><span style="color: #fcce2d">Our</span> Courses</h1>
+            <div class="services_section_2">
                <div class="row">
                   <div class="col-md-6">
-                     <div class="news_taital_box">
-                        <p class="date_text">01 Jan 2020</p>
-                        <h4 class="make_text">Make it Simple</h4>
-                        <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        <p class="post_text">Post By : Casinal</p>
+                     <div class="image_main">
+                        <img src="images/img-2.png" class="image_8" style="width:100%">
+                        <div class="text_main">
+                           <div class="seemore_text">Art And Design</div>
+                        </div>
                      </div>
                   </div>
                   <div class="col-md-6">
-                     <img src="images/img-6.png" class="image_6" style="width:100%">
-                     <h6 class="plus_text">+</h6>
+                     <div class="image_main">
+                        <img src="images/img-3.png" class="image_8" style="width:100%">
+                        <div class="text_main">
+                           <div class="seemore_text">Science</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="image_main">
+                        <img src="images/img-4.png" class="image_8" style="width:100%">
+                        <div class="text_main">
+                           <div class="seemore_text">Business Stady</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="image_main">
+                        <img src="images/img-5.png" class="image_8" style="width:100%">
+                        <div class="text_main">
+                           <div class="seemore_text">English Speaking</div>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
+         </div>            
       </div>
-      <!-- about section end -->
+      <!-- services section end -->
       <!-- footer section start -->
       <div class="footer_section layout_padding margin_top_90">
          <div class="container">
