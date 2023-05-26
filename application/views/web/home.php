@@ -51,15 +51,7 @@
                         <li class="nav-item">
                            <a class="nav-link" href="#important">SaIG MAP</a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="<?=base_url()?>assets/web/services.php">Services</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="<?=base_url()?>assets/web/blog.php">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="<?=base_url()?>assets/web/contact.php">Contact Us</a>
-                        </li>
+                        
                      </ul>
                      <div class="call_section">
                         <ul>
@@ -161,7 +153,7 @@
          <div class="important_bg">
 
             <!--- Memanggil Web --->
-            <iframe src="<?=base_url()?>/home" width="1730" height="850"></iframe>
+            <iframe src="<?=base_url()?>/home" width="100%" height="1080"></iframe>
          </div>
       </div>
       <!-- services section end -->
