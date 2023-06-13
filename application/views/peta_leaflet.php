@@ -1,6 +1,6 @@
 
 <div class="content"> 
- <div id="map" style="width: 100%; height: 800px; color:black;"></div> 
+ <div id="map" style="width: 100%; height: 850px; color:black;"></div> 
 </div> 
 
 <script>
@@ -13,8 +13,8 @@ var lst = new L.LayerGroup();
 var rawandbd = new L.LayerGroup();
 
 var map = L.map('map', { 
- center: [-6.40, 106.79], 
- zoom: 12, 
+ center: [-6.38556, 106.82], 
+ zoom: 12.4, 
  zoomControl: false,
  layers:[] 
 }); 
@@ -119,9 +119,11 @@ L.control.scale({metric: true, position: "bottomleft"}).addTo(map);
 var north = L.control({position: "bottomleft"});
 north.onAdd = function(map) {
 var div = L.DomUtil.create("div", "info legend");
-div.innerHTML = '<img src="<?=base_url()?>assets/compassFIXED.png"style=width:200px;>';
+div.innerHTML = '<img src="<?=base_url()?>assets/compassFIXED.png"style=width:160px;>';
 return div; }
 north.addTo(map);
+
+//GeoJSON-----------//
 
 $.getJSON("<?=base_url()?>/assets/Bataskel_ln.geojson",function(FID){ 
  L.geoJson( FID, { 
@@ -131,7 +133,7 @@ $.getJSON("<?=base_url()?>/assets/Bataskel_ln.geojson",function(FID){
  if ( FID < 64 ) color = "#000000"; 
  else if ( FID < 0 ) color = "#f2051d"; 
  else color = "#f2051d"; // no data 
- return { color: "#999", weight: 1.5, color: color, fillOpacity: 1 }; 
+ return { color: "#999", weight: 1.5, color: color, fillOpacity: 0.9 }; 
  }, 
  onEachFeature: function( feature, layer ){ 
  layer.bindPopup(feature.properties.WADMKD) 
@@ -147,7 +149,7 @@ $.getJSON("<?=base_url()?>/assets/KasusDBD.geojson",function(SkorDBD){
  else if (SkorDBD<3) fillColor="#FCA082"
  else if (SkorDBD<4) fillColor="#E32F27"
  else if (SkorDBD<5) fillColor="#8F000D"
- return { color: "#999", weight: 0, fillColor: fillColor, fillOpacity: 1 };
+ return { color: "#999", weight: 0, fillColor: fillColor, fillOpacity: 0.9 };
  },
  onEachFeature: function(feature, layer){
  layer.bindPopup(feature.properties.Nama_Kelur)
@@ -164,7 +166,7 @@ $.getJSON("<?=base_url()?>/assets/LST.geojson",function(SkorLST){
  else if (SkorLST<3) fillColor="#FFFF00"
  else if (SkorLST<4) fillColor="#FFAA00"
  else if (SkorLST<5) fillColor="#FF0000"
- return { color: "#999", weight: 0, fillColor: fillColor, fillOpacity: 1};
+ return { color: "#999", weight: 0, fillColor: fillColor, fillOpacity: 0.9};
  },
  onEachFeature: function(feature, layer){
  layer.bindPopup(feature.properties.KetLST)
@@ -181,7 +183,7 @@ $.getJSON("<?=base_url()?>/assets/LST.geojson",function(SkorLST){
  else if (Kepadatan_<8000) fillColor="#FFC588"
  else if (Kepadatan_<14000) fillColor="#D67631"
  else if (Kepadatan_<23000) fillColor="#784C02"
- return { color: "#999", weight: 0, fillColor: fillColor, fillOpacity: 1};
+ return { color: "#999", weight: 0, fillColor: fillColor, fillOpacity: 0.9};
  },
  onEachFeature: function(feature, layer){
  layer.bindPopup(feature.properties.Kode_Kelur)
@@ -198,12 +200,194 @@ $.getJSON("<?=base_url()?>/assets/DBDFinal.geojson",function(TotalSkor){
  else if (TotalSkor<7) fillColor="#FCA082"
  else if (TotalSkor<9) fillColor="#E32F27"
  else if (TotalSkor<11) fillColor="#8F000D"
- return { color: "#999", weight: 0, fillColor: fillColor, fillOpacity: 1 };
+ return { color: "#999", weight: 0, fillColor: fillColor, fillOpacity: 0.9 };
  },
  onEachFeature: function(feature, layer){
  layer.bindPopup(feature.properties.KetDBD)
  }
  }).addTo(rawandbd);
  });
+
+ $.getJSON("<?=base_url()?>/assets/BatasKelDepok.geojson",function(FID_){
+ L.geoJson( FID_, {
+ style: function(feature){
+ var fillColor,
+ FID_ = feature.properties.FID_;
+ if ( FID_ < 64) fillColor = "#000000"; 
+ else fillColor = "#f7f7f7"; // no data
+ return { color: "#999", weight: 1.2, fillColor: fillColor, fillOpacity: .1 };
+ },
+ onEachFeature: function( feature, layer ){
+ layer.bindPopup(feature.properties.WADMKD)
+ }
+ }).addTo(bataskel);
+ });
+
+//Legend-----------//
+
+const legend = L.control.Legend({
+position: "bottomleft",
+title: "Legenda",
+collapsed: false,
+symbolWidth: 23,
+opacity: 0.9,
+column: 2,
+legends: [
+//Jumlah Kasus DBD//
+{
+label: "Jumlah Kasus DBD",
+layers: kasusdbd,
+font: 29,
+type: "polygon",
+},{
+label: "Sedikit (<10)",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#F5F500",
+fillColor: "#F5F500",
+weight: 2
+},{
+label: "Sedang (11 - 25)",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#F5A300",
+fillColor: "#F5A300",
+weight: 2
+},{
+label: "Banyak (26 - 50)",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#F55200",
+fillColor: "#F55200",
+weight: 2
+},{
+label: "Sangat Banyak (>50)",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#F50000",
+fillColor: "#F50000",
+weight: 2
+},{
+//Kepadatan PDDK//
+label: "Kepadatan Penduduk",
+layers: kepadatan,
+font: 29,
+type: "polygon",
+},{
+label: "Rendah (<7.000 Jiwa/Km2)",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#FFEBAF",
+fillColor: "#FFEBAF",
+weight: 2
+},{
+label: "Sedang (7.001 - 10.000 Jiwa/Km2)",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#FFC588",
+fillColor: "#FFC588",
+weight: 2
+},{
+label: "Tinggi (10.001 - 15.000 Jiwa/Km2)",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#D67631",
+fillColor: "#D67631",
+weight: 2
+},{
+label: "Sangat Tinggi (>15.000 Jiwa/Km2)",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#784C02",
+fillColor: "#784C02",
+weight: 2
+},
+//LST
+{
+label: "Suhu Permukaan Tanah (°C)",
+layers: lst,
+font: 29,
+type: "polygon",
+},{
+label: "< 26",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#38C200",
+fillColor: "#38C200",
+weight: 2
+},{
+label: "26.01 - 28",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#FFFF00",
+fillColor: "#FFFF00",
+weight: 2
+},{
+label: "28.01 - 30",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#FFAA00",
+fillColor: "#FFAA00",
+weight: 2
+},{
+label: "30.01 - 32",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#FF0000",
+fillColor: "#FF0000",
+weight: 2
+},{
+//Kerawanan DBD FINAL//
+label: "Tingkat Kerawanan DBD [Final Map]",
+layers: rawandbd,
+font: 29,
+type: "polygon",
+},{
+label: "Tidak Rawan",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#FFE7E2",
+fillColor: "#FFE7E2",
+weight: 2
+},{
+label: "Cukup Rawan",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#FCA082",
+fillColor: "#FCA082",
+weight: 2
+},{
+label: "Rawan",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#E32F27",
+fillColor: "#E32F27",
+weight: 2
+},{
+label: "Sangat Rawan",
+font: 29,
+type: "polygon",
+sides: 4,
+color: "#8F000D",
+fillColor: "#8F000D",
+weight: 2
+}]
+})
+.addTo(map);
 
 </script> 
